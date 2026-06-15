@@ -4,25 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apurva OS 98</title>
+
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
 </head>
 
 <body>
 
 <div class="desktop">
 
-    <div class="icon">
+    <div class="icon" id="computerIcon">
         <img src="https://win98icons.alexmeub.com/icons/png/computer_explorer-0.png">
         <p>My Computer</p>
     </div>
 
-    <div class="icon">
+    <div class="icon" id="projectsIcon">
         <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png">
         <p>Projects</p>
     </div>
 
-    <div class="icon">
+    <div class="icon" id="aboutIcon">
         <img src="https://win98icons.alexmeub.com/icons/png/notepad_file-0.png">
         <p>About Me</p>
     </div>
@@ -39,16 +39,16 @@
 
 </div>
 
-<div class="window">
+<!-- Projects Window -->
+
+<div class="window" id="projectsWindow">
 
     <div class="titlebar">
 
         <span>Projects Explorer</span>
 
         <div class="title-buttons">
-            <button>_</button>
-            <button>□</button>
-            <button>X</button>
+            <button onclick="closeProjects()">X</button>
         </div>
 
     </div>
@@ -75,21 +75,51 @@
             📁 <a href="tribute page/index.html">Tribute Page</a>
         </div>
 
+    </div>
+
+</div>
+
+<!-- About Window -->
+
+<div class="window about-window" id="aboutWindow">
+
+    <div class="titlebar">
+
+        <span>About Me.txt</span>
+
+        <div class="title-buttons">
+            <button onclick="closeAbout()">X</button>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <h2>Apurva Jain</h2>
+
+        <p>
+            B.Tech Computer Science student passionate about
+            Web Development, AI/ML and problem solving.
+        </p>
+
         <br>
 
-        <h3>System Information</h3>
-
-        <p>Name: Apurva Jain</p>
-        <p>Role: B.Tech CSE Student</p>
-        <p>Status: Coding...</p>
+        <p>
+            I enjoy building projects, participating in hackathons,
+            and continuously learning new technologies.
+        </p>
 
     </div>
 
 </div>
 
+<!-- Taskbar -->
+
 <div class="taskbar">
 
-    <button class="start">🪟 Start</button>
+    <button class="start">
+        🪟 Start
+    </button>
 
     <div class="clock" id="clock">
         12:00 PM
@@ -97,6 +127,7 @@
 
 </div>
 
+<script src="script.js"></script>
 
 </body>
 </html>

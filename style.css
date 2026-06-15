@@ -1,4 +1,3 @@
-
 *{
     margin:0;
     padding:0;
@@ -11,8 +10,6 @@ body{
     height:100vh;
     overflow:hidden;
 }
-
-/* Desktop */
 
 .desktop{
     height:calc(100vh - 40px);
@@ -29,6 +26,11 @@ body{
     text-align:center;
     color:white;
     cursor:pointer;
+    padding:5px;
+}
+
+.icon:hover{
+    background:rgba(255,255,255,.2);
 }
 
 .icon img{
@@ -37,12 +39,6 @@ body{
     margin:auto;
     margin-bottom:5px;
 }
-
-.icon:hover{
-    background:rgba(255,255,255,.2);
-}
-
-/* Window */
 
 .window{
     position:absolute;
@@ -56,12 +52,20 @@ body{
     border-left:2px solid white;
     border-right:2px solid #404040;
     border-bottom:2px solid #404040;
+
+    box-shadow:5px 5px 15px rgba(0,0,0,.3);
+}
+
+.about-window{
+    display:none;
+    left:250px;
+    top:120px;
+    width:450px;
 }
 
 .titlebar{
     background:#000080;
     color:white;
-
     padding:4px 8px;
 
     display:flex;
@@ -72,8 +76,8 @@ body{
 }
 
 .title-buttons button{
-    width:18px;
-    height:18px;
+    width:20px;
+    height:20px;
     cursor:pointer;
 }
 
@@ -85,16 +89,15 @@ body{
 .project{
     background:white;
     padding:8px;
-    margin-bottom:8px;
+    margin-bottom:10px;
     border:1px solid gray;
 }
 
 .project a{
     text-decoration:none;
     color:#000080;
+    font-weight:bold;
 }
-
-/* Taskbar */
 
 .taskbar{
     position:fixed;
@@ -116,12 +119,27 @@ body{
 }
 
 .start{
-    padding:4px 15px;
+    padding:5px 15px;
     font-weight:bold;
+    cursor:pointer;
 }
 
 .clock{
     background:white;
-    padding:4px 10px;
     border:1px solid gray;
+    padding:4px 10px;
+}
+
+@media(max-width:768px){
+
+.window{
+    width:90%;
+    left:5%;
+}
+
+.about-window{
+    width:90%;
+    left:5%;
+}
+
 }
