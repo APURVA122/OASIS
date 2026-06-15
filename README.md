@@ -1,5 +1,5 @@
 # OIBSIP
-# 🖥️ Apurva OS 98
+
 
 ## 🌐 Live Demo
 https://apurva122.github.io/OIBSIP/
